@@ -1,4 +1,4 @@
-class Arayuz{
+class Arayuz{     //Verileri arayüze aktarmak için oluşturulan class
    
     constructor(){
         this.profil=document.getElementById("profil");
@@ -9,7 +9,7 @@ class Arayuz{
     clearInput(){
         this.inputField.value = "";
     }
-    showUserInfo(user){
+    showUserInfo(user){  //Profildeki Fullname, kullanıcı adı ve kaç repo olduğunu yani projelerin sayısını gösteren fonksiyon 
         this.profil.innerHTML = `
         <div class="ilkbolum">
             <div class="sol">
@@ -35,7 +35,7 @@ class Arayuz{
 
     }
 
-    showError(message) {
+    showError(message) {        //Hata mesajları almamızı gösteren function
         const div = document.createElement("div");
 
         div.className = "alert alert-danger";
@@ -50,7 +50,7 @@ class Arayuz{
     }
 
 
-    showRepoInfo(repos){
+    showRepoInfo(repos){ //Repolarda kullanılan language ler ve repoların KB ları
 
         this.langDiv.innerHTML= "";
         
@@ -69,4 +69,3 @@ class Arayuz{
     }
 
 }
-
