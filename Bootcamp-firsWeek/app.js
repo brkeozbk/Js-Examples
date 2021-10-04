@@ -10,15 +10,19 @@ function EventListener(){
     
 
 }
+// function getLang{
+// let 
+// }
 
 function getData(e){
-    
+
+    let reponame =toString(Text)
     let username = nameInput.value.trim();
     if(username===""){
         alert("Kullanıcı adı yanlış girdiniz")// boş kullanıcı adı girilirse hata al
     }
     else{
-        github.getGithubData(username)
+        github.getGithubData(username, reponame)
         .then(response => {
             if(response.user.message==="bulunamadı"){ //yanlış kullanıcı adı girilirse hata al
                arayuz.showError("Böyle bir kullanıcı yok")
@@ -27,6 +31,7 @@ function getData(e){
             else{
                arayuz.showUserInfo(response.user); //eğer hata yok ise arayuz.js de yazılan functionu index.html e yazdır
                arayuz.showRepoInfo(response.repo);
+            
 
             }
 

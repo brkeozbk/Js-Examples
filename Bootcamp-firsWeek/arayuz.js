@@ -34,7 +34,7 @@ class Arayuz{     //Verileri arayüze aktarmak için oluşturulan class
         `;
 
     }
-
+    
     showError(message) {        //Hata mesajları almamızı gösteren function
         const div = document.createElement("div");
 
@@ -51,15 +51,18 @@ class Arayuz{     //Verileri arayüze aktarmak için oluşturulan class
 
 
     showRepoInfo(repos){ //Repolarda kullanılan language ler ve repoların KB ları
-
+     
         this.langDiv.innerHTML= "";
-        
-        repos.forEach(repo => {
+        repos.forEach(repo=>{
+            console.log(repo)
+        })
+
+        repos.forEach(repo=> {
             this.langDiv.innerHTML += `
 
             <div id="languages" class="lang">
-            <span class="badge" id="repoStar">${repo.language}</span>
-            <span class="badgee" id="repoSize">${repo.size} KB</span>
+            <span class="badge" id="repoStar">${repo.languagesPercentage}</span>
+            <span class="badgee" id="repoSize"> KB</span>
 
             </div>
             
