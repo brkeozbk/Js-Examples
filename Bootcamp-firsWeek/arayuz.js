@@ -53,16 +53,13 @@ class Arayuz{     //Verileri arayüze aktarmak için oluşturulan class
     showRepoInfo(repos){ //Repolarda kullanılan language ler ve repoların KB ları
      
         this.langDiv.innerHTML= "";
-        repos.forEach(repo=>{
-            console.log(repo)
-        })
-
+        
         repos.forEach(repo=> {
             this.langDiv.innerHTML += `
 
             <div id="languages" class="lang">
-            <span class="badge" id="repoStar">${repo.languagesPercentage}</span>
-            <span class="badgee" id="repoSize"> KB</span>
+            <span class="badge" id="repoStar">${repo.LName}</span>
+            <span class="badgee" id="repoSize">${"%" + repo.LSize}</span>
 
             </div>
             
